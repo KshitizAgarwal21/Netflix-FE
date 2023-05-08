@@ -17,6 +17,7 @@ import "./user.css";
 import SearchIcon from "@mui/icons-material/Search";
 import AddAlertIcon from "@mui/icons-material/AddAlert";
 import InfoOutlinedIcon from "@mui/icons-material/InfoOutlined";
+import Popular from "../Popular/Popular";
 export default function User() {
   const [anchorEl, setAnchorEl] = React.useState(null);
   const open = Boolean(anchorEl);

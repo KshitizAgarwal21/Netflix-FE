@@ -1,14 +1,16 @@
 import logo from "./logo.svg";
 import "./App.css";
-import ReactPlayer from "react-player";
+
 import { useState } from "react";
-import Stack from "@mui/material/Stack";
-import Slider from "@mui/material/Slider";
-import VolumeDown from "@mui/icons-material/VolumeDown";
-import VolumeUp from "@mui/icons-material/VolumeUp";
+
 import { Box } from "@mui/material";
 import Home from "./Components/Home/Home";
+import Popular from "./Components/Popular/Popular";
 import User from "./Components/User/User";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Player from "./Components/Player/Player";
+import Recommendation from "./Components/Recommendations/Recommendation";
+import Landing from "./Components/Landing/Landing";
 function App() {
   const [value, setValue] = useState(30);
   const [isloggedin, setloggedinstatus] = useState(true);
@@ -19,43 +21,23 @@ function App() {
   const [play, setplayback] = useState(false);
   const [videostate, setvideostate] = useState("Play");
   return (
-    <div className="App">
-      {!isloggedin && (
-        <>
-          <Home />
-        </>
-      )}
-      {isloggedin && (
-        <>
-          <User />
-        </>
-      )}
-
-      {/* <ReactPlayer
-        url="https://www.twitch.tv/furioussscs"
-        volume={value / 100}
-        playing={play}
-        controls={true}
-        style={{ marginLeft: "auto", marginRight: "auto" }}
-        onSeek={(e) => console.log("onSeek", e)}
-      ></ReactPlayer>
-
-      <button
-        onClick={() => {
-          setplayback(!play);
-          setvideostate(play ? "Play" : "Pause");
-        }}
-      >
-        {videostate}
-      </button>
-      <Box sx={{ width: 200 }}>
-        <Stack spacing={2} direction="row" sx={{ mb: 1 }} alignItems="center">
-          <VolumeDown />
-          <Slider aria-label="Volume" value={value} onChange={handleChange} />
-          <VolumeUp />
-        </Stack>
-      </Box> */}
-    </div>
+    <BrowserRouter>
+      <div className="App">
+        {!isloggedin && (
+          <>
+            <Home />
+          </>
+        )}
+        {isloggedin && (
+          <>
+            <Routes>
+              <Route path="/" element={<Landing />} />
+              <Route path="/player" element={<Player />}></Route>
+            </Routes>
+          </>
+        )}
+      </div>
+    </BrowserRouter>
   );
 }
 
