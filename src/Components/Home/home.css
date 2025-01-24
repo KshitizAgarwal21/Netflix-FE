@@ -98,18 +98,7 @@ select{
     margin-left: 10px;
 
 }
-.cards > img{
-    display: block;
-    width: 60%;
-    height: 60%;
-    margin: 20px auto;
-}
-.cards h2 {
-    color: #fff;
-    text-align: center;
-}
-.cards h3 {
-    color: #fff;
+.cards > img#fff;
     text-align: center;
     width: 70%;
     margin: 0 auto;

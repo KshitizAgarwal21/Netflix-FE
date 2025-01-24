@@ -8,32 +8,7 @@ import download from "../../assets/download.png";
 import Accordion from "@mui/material/Accordion";
 import AccordionSummary from "@mui/material/AccordionSummary";
 import AccordionDetails from "@mui/material/AccordionDetails";
-import Typography from "@mui/material/Typography";
-import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
-import { Box } from "@mui/material";
-
-export default function Home() {
-  return (
-    <div className="main-container">
-      <div style={{ display: "flex", justifyContent: "space-between" }}>
-        <div className="logo">
-          {" "}
-          <img src={logo} height="100px" width="200px" />
-        </div>
-
-        <div className="buttons">
-          <select>
-            <option>English</option>
-            <option>Hindi</option>
-          </select>
-          <button className="signin">Sign in</button>
-        </div>
-      </div>
-      <div className="banner-text">
-        <h1>Unlimited movies, TV shows and more. </h1>
-        <h2>Watch anywhere. Cancel anytime.</h2>
-        <h3>
-          Ready to watch? Enter your email to create or restart your membership.
+import Typography fromstart your membership.
         </h3>
       </div>
       <div className="banner-inputs">
