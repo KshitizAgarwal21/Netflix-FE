@@ -9,7 +9,6 @@ import Popular from "./Components/Popular/Popular";
 import User from "./Components/User/User";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Player from "./Components/Player/Player";
-import Recommendation from "./Components/Recommendations/Recommendation";
 import Landing from "./Components/Landing/Landing";
 function App() {
   const [value, setValue] = useState(30);
