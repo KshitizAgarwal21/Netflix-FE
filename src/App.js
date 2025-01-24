@@ -22,7 +22,7 @@ function App() {
   const [videostate, setvideostate] = useState("Play");
   return (
     <BrowserRouter>
-      <div className="App">
+      <div className="Apps">
         {!isloggedin && (
           <>
             <Home />
